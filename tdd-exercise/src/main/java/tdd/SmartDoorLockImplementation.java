@@ -12,7 +12,10 @@ public class SmartDoorLockImplementation implements SmartDoorLock {
 
     @Override
     public void setPin(int pin) {
-        this.pin = pin;
+        if (String.valueOf(pin).length() == 4)
+            this.pin = pin;
+        else
+            throw new IllegalArgumentException();
     }
 
     @Override

@@ -11,7 +11,7 @@ public class SmartDoorLockTest {
         assertTrue(true);
     }
 
-    public final static int PIN = 0;
+    public final static int PIN = 1234;
     public final static int WRONG_PIN = 1;
     private SmartDoorLock smartDoorLock;
 
@@ -24,7 +24,7 @@ public class SmartDoorLockTest {
 
     @Test
     void testSmartDoorStartsOpen() {
-        assertTrue(smartDoorLock.isLocked());
+        assertFalse(smartDoorLock.isLocked());
     }
 
     @Test
@@ -45,5 +45,10 @@ public class SmartDoorLockTest {
         this.smartDoorLock.lock();
         this.smartDoorLock.unlock(WRONG_PIN);
         assertTrue(smartDoorLock.isLocked());
+    }
+
+    @Test
+    void testBlockSmartDoor() {
+
     }
 }
