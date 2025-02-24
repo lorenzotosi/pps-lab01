@@ -15,7 +15,7 @@ class SimpleBankAccountTest {
     public static final int EMPTY_BANK_ACCOUNT = 0;
     public static final int USER_ONE = 1;
     public static final int USER_TWO = 2;
-    //public static final int WITHDRAW_FEE = SimpleBankAccount.WITHDRAW_FEE;
+    public static final int WITHDRAW_FEE = SimpleBankAccount.WITHDRAW_FEE;
     private AccountHolder accountHolder;
     private BankAccount bankAccount;
 
@@ -51,8 +51,7 @@ class SimpleBankAccountTest {
     void testWithdraw() {
         depositDefaultAmount();
         bankAccount.withdraw(accountHolder.getId(), DEFAULT_WITHDRAW_AMOUNT);
-//        assertEquals(30-WITHDRAW_FEE, bankAccount.getBalance());
-        assertEquals(30, bankAccount.getBalance());
+        assertEquals(30-WITHDRAW_FEE, bankAccount.getBalance());
     }
 
     @Test
