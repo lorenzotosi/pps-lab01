@@ -32,4 +32,10 @@ public class SmartDoorLockTest {
         assertTrue(smartDoorLock.isLocked());
     }
 
+    @Test
+    void testUnlockSmartDoor() {
+        this.smartDoorLock.lock();
+        this.smartDoorLock.unlock(PIN);
+        assertFalse(smartDoorLock.isLocked());
+    }
 }

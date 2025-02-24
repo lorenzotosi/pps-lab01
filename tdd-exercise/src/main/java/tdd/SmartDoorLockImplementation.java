@@ -3,6 +3,7 @@ package tdd;
 public class SmartDoorLockImplementation implements SmartDoorLock {
 
     private boolean isLocked;
+    private int pin;
 
     SmartDoorLockImplementation() {
         this.isLocked = false;
@@ -11,12 +12,12 @@ public class SmartDoorLockImplementation implements SmartDoorLock {
 
     @Override
     public void setPin(int pin) {
-
+        this.pin = pin;
     }
 
     @Override
     public void unlock(int pin) {
-
+        isLocked = this.pin != pin;
     }
 
     @Override
