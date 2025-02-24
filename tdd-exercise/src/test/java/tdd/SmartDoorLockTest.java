@@ -11,18 +11,25 @@ public class SmartDoorLockTest {
         assertTrue(true);
     }
 
+    public final static int PIN = 0;
     private SmartDoorLock smartDoorLock;
+
 
     @BeforeEach
     public void setUp() {
         this.smartDoorLock = new SmartDoorLockImplementation();
+        this.smartDoorLock.setPin(PIN);
     }
 
     @Test
-    void testSmartDoorStartsLocked() {
+    void testSmartDoorStartsOpen() {
         assertTrue(smartDoorLock.isLocked());
     }
 
-
+//    @Test
+//    void testUnlockSmartDoor(){
+//        this.smartDoorLock.unlock(PIN);
+//        assertFalse(smartDoorLock.isLocked());
+//    }
 
 }

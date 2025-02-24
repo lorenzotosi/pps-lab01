@@ -5,7 +5,7 @@ public class SmartDoorLockImplementation implements SmartDoorLock {
     private boolean isLocked;
 
     SmartDoorLockImplementation() {
-        this.isLocked = true;
+        this.isLocked = false;
     }
 
 
