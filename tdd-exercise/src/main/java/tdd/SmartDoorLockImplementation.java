@@ -21,7 +21,7 @@ public class SmartDoorLockImplementation implements SmartDoorLock {
 
     @Override
     public void lock() {
-
+        this.isLocked = true;
     }
 
     @Override
